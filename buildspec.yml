@@ -10,7 +10,7 @@ phases:
     commands:    
       - echo Build started...
       - docker build --rm -f "Dockerfile" -t haridevelops/aws-code-pipeline-testing:v2 .
-      - docker tag aws-code-pipeline-testing:v2 haridevelops/aws-code-pipeline-testing:v2
+      - docker tag haridevelops/aws-code-pipeline-testing:v2 haridevelops/aws-code-pipeline-testing:v2
       - docker images
   post_build:
     commands:
