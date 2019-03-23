@@ -8,11 +8,11 @@ phases:
       - echo Successfully logged in to the Docker Hub...
   build:
     commands:    
-      - echo Build started on `date`
-      - docker build --rm -f "Docketfile" -t $IMAGE_REPO_NAME:$IMAGE_TAG .
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $IMAGE_REPO_NAME:$IMAGE_TAG
+      - echo Build started...
+      - docker build --rm -f "Docketfile" -t haridevelops/aws-code-pipeline-testing:v2 .
+      - docker tag aws-code-pipeline-testing:v2 haridevelops/aws-code-pipeline-testing:v2
   post_build:
     commands:
-      - echo Build completed  on `date`
+      - echo Build completed...
       - echo pushing the Docker image to Docker Hub...
-      - docker push $IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker push haridevelops/aws-code-pipeline-testing:v2
